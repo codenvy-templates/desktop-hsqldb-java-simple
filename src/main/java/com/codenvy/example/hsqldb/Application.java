@@ -8,6 +8,8 @@ import java.sql.Statement;
 
 public class Application {
     public static void main(String[] args) throws Exception {
+        Class.forName("org.hsqldb.jdbc.JDBCDriver");
+        
         Connection connection = DriverManager.getConnection("jdbc:hsqldb:test", "SA", "");
         Statement statement = connection.createStatement();
 
